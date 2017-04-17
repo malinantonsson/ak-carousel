@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Carousel for ak Creative
-Description: Used to dislay a carousel without archive (e.g testimonials)
+Description: Used to dislay a carousel without archive (e.g testimonials). Shortcode: [akCarousel-posts post_type="posttype_name"].
 */
 
 // Enqueue styles and scripts
@@ -44,11 +44,10 @@ function akCarousel_sc($atts) {
 		    	$content = ak_carousel_content();
 		    	$output .= 	'
 		    	<div class="ak-carousel-post" id="'.$slug.'"
-		    		data-index="'.$index.'" 
-		    		data-behaviour="ak-carousel-post">
-			        <h3 class="ak-carousel-post__headline">
+		    		data-index="'.$index.'">
+					<h3 class="ak-carousel-post__headline">
 			        	'.$title.'</h3>
-			        
+ 
 			        <div class="ak-carousel-post__content">'
 			        	.$content.
 			        '</div>

@@ -1,8 +1,6 @@
 (function(){
 	"use strict";
 
-	var target;
-
 	var $ = window.jQuery;
 
 	var startslide = 0;
