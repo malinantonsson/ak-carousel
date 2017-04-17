@@ -13,6 +13,8 @@
   		adaptiveHeight: true,
   		appendArrows: '.ak-carousel__bottom',
   		prevArrow: '.ak-carousel__button--prev',
-  		nextArrow: '.ak-carousel__button--next'
+  		nextArrow: '.ak-carousel__button--next',
+	  	autoplay: true,
+	  	autoplaySpeed: 5000
 	});
 })();
