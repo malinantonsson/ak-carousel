@@ -13,7 +13,7 @@ function add_ak_carousel_script() {
 // Create the post shortcode
 add_shortcode("akCarousel-posts", "akCarousel_sc");
 
-function ak_the_content( $more_link_text = null, $strip_teaser = false) {
+function ak_carousel_content( $more_link_text = null, $strip_teaser = false) {
     $content = get_the_content( $more_link_text, $strip_teaser );
     $content = apply_filters( 'the_content', $content );
     $content = str_replace( ']]>', ']]&gt;', $content );
@@ -41,7 +41,7 @@ function akCarousel_sc($atts) {
 		    foreach($custom_posts as $post) : setup_postdata($post);
 		    	$slug = basename(get_permalink());
 		    	$title = get_the_title();
-		    	$content = ak_the_content();
+		    	$content = ak_carousel_content();
 		    	$output .= 	'
 		    	<div class="ak-carousel-post" id="'.$slug.'"
 		    		data-index="'.$index.'" 
@@ -59,25 +59,11 @@ function akCarousel_sc($atts) {
 	    	$output .= 	'</div>
 		    <div class="ak-carousel__bottom">
 		    	<button class="ak-carousel__button ak-carousel__button--prev">
-		    	 	<svg class="ak-icon ak-carousel__icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/plugins/wp-svg-spritemap-master/defs.svg#:scroll-left"></use></svg>
+		    	 	<svg class="ak-icon ak-carousel__icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ak-creative/wp-content/plugins/wp-svg-spritemap-master/defs.svg#:scroll-left"></use></svg>
 		    	</button>
 
-		    	<div class="ak-carousel__social"> 
-		    		<button class="ak-carousel__button ak-carousel__button--linkedin">
-		    			<svg class="ak-icon ak-carousel__icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/plugins/wp-svg-spritemap-master/defs.svg#:linkedin"></use></svg>
-		    		</button>
-
-		    		<button class="ak-carousel__button ak-carousel__button--twitter">
-		    			<svg class="ak-icon ak-carousel__icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/plugins/wp-svg-spritemap-master/defs.svg#:twitter"></use></svg>
-		    		</button>
-
-		    		<button class="ak-carousel__button ak-carousel__button--facebook">
-		    			<svg class="ak-icon ak-carousel__icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/plugins/wp-svg-spritemap-master/defs.svg#:facebook"></use></svg>
-		    		</button>
-		    	</div>
-
 		    	<button class="ak-carousel__button ak-carousel__button--next">
-		    	 	<svg class="ak-icon ak-carousel__icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/plugins/wp-svg-spritemap-master/defs.svg#:scroll-right"></use></svg>
+		    	 	<svg class="ak-icon ak-carousel__icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ak-creative/wp-content/plugins/wp-svg-spritemap-master/defs.svg#:scroll-right"></use></svg>
 		    	</button>
 		    </div>';
 	    
