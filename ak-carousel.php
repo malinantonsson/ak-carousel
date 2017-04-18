@@ -58,11 +58,11 @@ function akCarousel_sc($atts) {
 	    	$output .= 	'</div>
 		    <div class="ak-carousel__bottom">
 		    	<button class="ak-carousel__button ak-carousel__button--prev">
-		    	 	<svg class="ak-icon ak-carousel__icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ak-creative/wp-content/plugins/wp-svg-spritemap-master/defs.svg#:scroll-left"></use></svg>
+		    	 	<svg class="ak-icon ak-carousel__icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/plugins/wp-svg-spritemap-master/defs.svg#:scroll-left"></use></svg>
 		    	</button>
 
 		    	<button class="ak-carousel__button ak-carousel__button--next">
-		    	 	<svg class="ak-icon ak-carousel__icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ak-creative/wp-content/plugins/wp-svg-spritemap-master/defs.svg#:scroll-right"></use></svg>
+		    	 	<svg class="ak-icon ak-carousel__icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/plugins/wp-svg-spritemap-master/defs.svg#:scroll-right"></use></svg>
 		    	</button>
 		    </div>';
 	    
