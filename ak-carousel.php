@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Carousel for ak Creative
-Description: Used to dislay a carousel without archive (e.g testimonials). Shortcode: [akCarousel-posts post_type="posttype_name"].
+Description: Used to dislay a carousel without archive (e.g testimonials). Shortcode: [akCarousel post_type="posttype_name"].
 */
 
 // Enqueue styles and scripts
@@ -11,7 +11,7 @@ function add_ak_carousel_script() {
 }
 
 // Create the post shortcode
-add_shortcode("akCarousel-posts", "akCarousel_sc");
+add_shortcode("akCarousel", "akCarousel_sc");
 
 function ak_carousel_content( $more_link_text = null, $strip_teaser = false) {
     $content = get_the_content( $more_link_text, $strip_teaser );
