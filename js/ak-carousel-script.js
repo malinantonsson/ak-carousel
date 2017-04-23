@@ -10,8 +10,6 @@
 	  	initialSlide: startslide,
 	  	slidesToScroll: 1,
 	  	arrows: true,
-  		adaptiveHeight: true,
-  		appendArrows: '.ak-carousel__bottom',
   		prevArrow: '.ak-carousel__button--prev',
   		nextArrow: '.ak-carousel__button--next',
 	  	autoplay: true,

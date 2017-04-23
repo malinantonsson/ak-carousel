@@ -35,20 +35,20 @@ function akCarousel_sc($atts) {
 
 	$index = 0;
     $output .= 	'
-    	<div class="ak-carousel-wrapper">
-	    	<div class="ak-carousel">'; 
+    	<div class="ak-post-wrapper ak-carousel-wrapper">
+	    	<div class="ak-posts ak-carousel">'; 
 		    
 		    foreach($custom_posts as $post) : setup_postdata($post);
 		    	$slug = basename(get_permalink());
 		    	$title = get_the_title();
 		    	$content = ak_carousel_content();
 		    	$output .= 	'
-		    	<div class="ak-carousel-post" id="'.$slug.'"
+		    	<div class="ak-post ak-carousel-post" id="'.$slug.'"
 		    		data-index="'.$index.'">
-					<h3 class="ak-carousel-post__headline">
+					<h3 class="ak-post__headline ak-carousel-post__headline">
 			        	'.$title.'</h3>
  
-			        <div class="ak-carousel-post__content">'
+			        <div class="ak-post__content ak-carousel-post__content">'
 			        	.$content.
 			        '</div>
 			    </div>';
@@ -56,14 +56,16 @@ function akCarousel_sc($atts) {
 			$index++;
 		    endforeach; wp_reset_postdata();
 	    	$output .= 	'</div>
-		    <div class="ak-carousel__bottom">
-		    	<button class="ak-carousel__button ak-carousel__button--prev">
-		    	 	<svg class="ak-icon ak-carousel__icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/plugins/wp-svg-spritemap-master/defs.svg#:scroll-left"></use></svg>
-		    	</button>
+		    <div class="ak-post-nav">
+		    	<div class="ak-post-nav__inner">
+			    	<button class="ak-post-nav__button ak-carousel__button--prev">
+			    	 	<svg class="ak-icon ak-post-nav__icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/plugins/wp-svg-spritemap-master/defs.svg#:scroll-left"></use></svg>
+			    	</button>
 
-		    	<button class="ak-carousel__button ak-carousel__button--next">
-		    	 	<svg class="ak-icon ak-carousel__icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/plugins/wp-svg-spritemap-master/defs.svg#:scroll-right"></use></svg>
-		    	</button>
+			    	<button class="ak-post-nav__button ak-carousel__button--next">
+			    	 	<svg class="ak-icon ak-post-nav__icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/plugins/wp-svg-spritemap-master/defs.svg#:scroll-right"></use></svg>
+			    	</button>
+			    </div>
 		    </div>';
 	    
 		$output .= 	'</div>';
